@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - My Simple Note</title>
-    <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #4285f4; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; font-size: 1.2em; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #888; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 - 闪念随手记</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;max-width:800px;margin:40px auto;padding:0 24px;line-height:1.8;color:#263238}h1{color:#2866bb;border-bottom:1px solid #ddd;padding-bottom:12px}h2{margin-top:28px;font-size:1.2em}p,li{font-size:15px}footer{margin-top:40px;color:#777;font-size:13px}</style>
 </head>
 <body>
-    <h1>Privacy Policy for My Simple Note</h1>
-    <p>Last Updated: June 8, 2024</p>
-
-    <h2>1. Data Collection</h2>
-    <p>This Extension does not collect, store, or transmit any personally identifiable information (PII) to external servers.</p>
-
-    <h2>2. Data Storage</h2>
-    <p>All data recorded by the user (notes, code snippets) is stored locally within the user's browser using the <strong>chrome.storage.sync</strong> API. This data is synced across the user's own devices via their Google Account, as provided by the Google Chrome synchronization service.</p>
-
-    <h2>3. Permissions Usage</h2>
-    <ul>
-        <li><strong>Storage:</strong> Used to save and retrieve the user's notes.</li>
-        <li><strong>ContextMenus:</strong> Used to allow the user to save selected text from websites directly into their notes.</li>
-    </ul>
-
-    <h2>4. Third-Party Access</h2>
-    <p>We do not share any data with third parties. Your data remains under your control within your Google ecosystem.</p>
-
-    <div class="footer">
-        © 2024 My Simple Note Developer
-    </div>
+<h1>闪念随手记 · 隐私政策</h1>
+<p>最后更新：2026年10月28日</p>
+<p>本政策适用于 Chrome 浏览器扩展“笔记 · 闪念随手记”，说明用户笔记、网页剪藏内容和云端备份数据的处理方式。</p>
+<h2>1. 本地数据</h2>
+<p>用户主动创建的笔记、选中的网页文字、内嵌图片、标签等数据默认保存在浏览器的 chrome.storage.local 中。用户可以自行导入、导出或删除笔记。扩展不为了广告用途追踪用户的浏览活动。</p>
+<h2>2. 可选的 Google Drive 云备份</h2>
+<p>云备份不是使用扩展的必要条件。用户主动连接 Google 账号并授权后，可以将笔记备份上传到自己 Google Drive 的应用专用数据空间（appDataFolder），也可以选择启用自动备份。自动备份默认关闭，启用后由扩展在浏览器运行时定期检查备份条件。</p>
+<p>备份可能包含笔记文字、用户保存的网页内容、内嵌图片、标签、置顶及回收站状态等属性。用户可以查看历史备份并按需恢复；恢复通过合并笔记完成，不属于实时双向同步。备份不会自动清理，可能占用 Google Drive 容量。</p>
+<p>扩展仅请求 Google Drive 的 drive.appdata 授权范围，用于访问自身的应用专用数据空间，不请求读取用户整个 Google Drive 文件库的权限。应用专用备份通常不会显示在普通 Drive 文件列表中。</p>
+<h2>3. 权限用途</h2>
+<ul>
+<li><strong>storage、unlimitedStorage：</strong>在浏览器本地保存和管理笔记与设置。</li>
+<li><strong>contextMenus：</strong>支持将用户主动选中的网页文字通过右键菜单保存为笔记。</li>
+<li><strong>identity：</strong>通过 Google OAuth 获得用户对云端备份的授权。</li>
+<li><strong>alarms：</strong>在用户启用自动备份时执行定时检查。</li>
+<li><strong>www.googleapis.com 主机权限：</strong>访问 Google Drive API，完成备份、历史记录查询和恢复。</li>
+</ul>
+<h2>4. 数据使用与共享</h2>
+<p>扩展不会将笔记数据发送到开发者自有服务器，不出售笔记或个人信息，也不将数据用于定向广告。用户启用云备份后，相关备份数据通过 Google API 传输并保存在用户授权的个人 Google Drive 应用专用空间。Google 服务自身的数据处理受其适用政策约束。</p>
+<h2>5. 授权及数据安全</h2>
+<p>Google 账号授权通过 Chrome Identity 机制处理，授权令牌不会写入笔记备份文件。云备份经 Google API 的加密连接传输，但扩展未提供额外的端到端加密；扩展界面的密码功能也不等于对笔记文件进行加密。请勿将其作为保存高度敏感凭证的专用加密工具。</p>
+<h2>6. 用户控制与删除</h2>
+<p>用户可以删除或导出本地笔记、关闭自动备份、断开 Google 连接。断开连接不会自动删除本地笔记和已有的云端备份。用户可在 Google 账号的第三方连接管理中撤销授权，并通过 Google Drive 的应用数据管理方式清理备份。卸载扩展前建议自行导出笔记。</p>
+<h2>7. 政策变更</h2>
+<p>本政策可能随扩展功能及数据处理方式变化而更新，届时将在本页面标注更新日期。</p>
+<footer>© 2026 闪念随手记</footer>
 </body>
 </html>
